@@ -19,5 +19,5 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         for (( i=0; i<RUNS; i++ )); do
-          gh workflow run --repo "$GITHUB_REPOSITORY" Qodana
+          gh workflow run --repo "$GITHUB_REPOSITORY" --ref qodana-failure Qodana
         done
